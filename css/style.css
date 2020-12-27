@@ -1,0 +1,308 @@
+/* pop up */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*.searchbox{*/
+/*    border: none;*/
+/*}*/
+/* End of pop up */
+
+.logo {
+    height: 10%;
+    width: 15%;
+    margin-left: 2%;
+}
+
+.ui-icon-home {
+    height: 2%;
+    width: 5%;
+    margin-left: 40%;
+    margin-bottom: 3%;
+}
+
+.ui-icon-cart {
+    height: 2%;
+    width: 5%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+.ui-icon-search {
+    height: 3%;
+    width: 5.5%;
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+
+.ui-icon-menu {
+    height: 2%;
+    width: 5%;
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+
+.text-normal {
+    font-size: 8px;
+    font-family: "Poppins";
+    text-shadow: none;
+    color: white;
+    margin-left: 25%;
+}
+
+.text-normal2 {
+    font-size: 14px;
+    font-family: "Poppins";
+}
+
+/* nav bar */
+.panel-top-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    background: #ececec;
+}
+
+.menu-item-2 {
+    background-color: #f2f2f2 !important;
+    min-height: 0px !important;
+    padding-left: 4em !important;
+}
+
+.menu-text {
+    font-size: 14px;
+    font-family: "Poppins";
+}
+
+.menu-icon {
+    margin: 15px;
+}
+
+.img-text {
+    font-size: 12px;
+    font-family: "Poppins";
+}
+
+.shopsName {
+    font-size: 12px;
+    font-family: "Poppins";
+    margin-bottom: 50%;
+}
+
+/*footer icons */
+.footerlogo {
+    height: 25%;
+    width: 25%;
+    margin-left: 2%;
+    margin-top: 2%
+}
+
+.twitter {
+    height: 2%;
+    width: 5%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+.facebook {
+    height: 2%;
+    width: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.rate-icons {
+    float: right;
+    width: 150px !important;
+}
+
+/*.rate-icons tr td {*/
+/*    padding: 5px;*/
+/*}*/
+.rate-text {
+    font-size: 12px !important;
+}
+
+input-field .rate-icons {
+    float: right;
+    width: 150px !important;
+}
+
+.rate-icons tr td {
+    padding: 5px;
+}
+
+
+.spinner {
+    border-radius: 50% !important;
+}
+
+/* button */
+.btn {
+    font-size: 12px;
+    margin-top: -7px;
+    margin-left: 70%;
+    height: 10px;
+    background-color: #D6A640;
+    font-family: Poppins;
+    font-weight: normal;
+    color: white;
+    text-align: center
+}
+
+
+.message-item {
+    padding: 10px;
+    background-color:white;
+    font-size: 12px;
+    border: 1px solid;
+    border-color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message-item-pro-pic {
+    width: 40px;
+    border-radius: 100%;
+}
+.message-item-send {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fffbfd;
+    font-size: 12px;
+    border: 1px solid rgba(220, 229, 247, 0.53);
+    border-radius: 5px;
+    text-align: right;
+    top: -20px;
+}
+
+.favourites > button span {
+    font-size: 30px;
+    /* color: transparent;   */
+    /*opacity: 0.5;*/
+    color: rgba(0, 0, 0, 0.2);
+}
+
+      /* The Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+.favourite-rate {
+    background: none !important;
+    border: none !important;
+    /* padding: 0 !important; */
+    /* optional */
+    font-family: arial, sans-serif;
+    /* input has OS specific font-family */
+    /* color: #0275d8 !important; */
+    text-decoration: underline;
+    cursor: pointer;
+    border-color: none !important;
+    width: auto !important;
+    display: inline !important;
+    /* margin-right: 5px !important; */
+}
+
+.rating .rate-active-one {
+    background-color: #fff08c;
+}
+
+.rating .rate-active-two {
+    background-color: #fff08c;
+}
+
+.rating .rate-active-three {
+    background-color: #fff08c;
+}
+
+.rating .rate-active-four {
+    background-color: #fff08c;
+}
+
+.rating .rate-active-five {
+    background-color: #fff08c;
+}
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+    list-style-type: none;
+    padding: 0;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.rating-stars ul > li.star {
+    display: inline-block;
+
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+    font-size: 1.8em; /* Change the size of the stars */
+    color: #ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+    color: #FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+    color: #FF912C;
+}

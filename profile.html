@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>profile</title>
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div data-role="page" style="background-color: white">
+
+    <div id="header"></div>
+
+    <div data-role="content">
+        <p class="profile" style="font-size: 16px; font-family: Poppins; text-align: center; font-weight: bold;">My Profile</p>
+        <img id="img" src="image/Avater.png" style="  display: block; margin-left: auto; margin-right: auto; width: 25%;margin-top: -20px;" width="100"/>
+        <p>
+            <a href="#" id="editprofile" data-role="button" data-inline="true" style="font-size: 12px;  margin-top: -11px; height: 13px; background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; transform: translate(-50%, -50%); left: 50%;">Edit Profile</a>
+        </p>
+        <div class="ui-grid-solo" style="border: 1px solid; border-color: #000; margin-top: -24px; text-align: center; width: 260px;
+        margin-left: 40px;">
+                <div class="ui-block-a" >
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Wallet balance :</span>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">Rs 2000.00</span> <br>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Available Points :</span>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">250</span><br><br>
+
+                </div>
+        </div>
+        <div class="ui-grid-a" >
+                <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a" style="height:23px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Name </span>
+                </div></div>
+                <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a" style="height:23px; margin-top: -20px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">- Mr. John Doe</span>
+                </div></div>
+        </div>
+        <div class="ui-grid-a" >
+                <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a" style="height:23px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Home Address</span>
+                </div></div>
+                <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a" style="height:33px; margin-top: -20px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">- No: 23, Melbourne Ave, 
+                    Wellawatte.</span>
+                </div></div>
+        </div>
+        <div class="ui-grid-a" >
+                <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a" style="height:23px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Contact</span>
+                </div></div>
+                <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a" style="height:23px; margin-top: -20px; background-color: white; border: none;">
+                <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">- +94767676767</span>
+                </div></div>
+        </div>
+        <p>
+            <a href="#" data-role="button" data-inline="true" style="font-size: 12px;  margin-left: 4%;  background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; display:inline" class="inline">View Favorites</a>
+            <a href="#" id="Managewal" data-role="button" data-inline="true" style="font-size: 12px;  margin-top: -34px; margin-left: 59%; background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; height: 17px; ">Manage Wallet</a>
+        </p>
+    </div>
+
+    <div data-role="popup" id="updateprofile" data-theme="a" class="ui-corner-all" >
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right" >X</a>
+        <form>
+            <div  style="padding:33px 30px;">
+                <img id="img" src="image/Avater.png" style="  display: block; ; width: 25%;"/>
+                <h3  style="color: #000000; font-family:Poppins;margin-top: -29px; font-size: 12px; margin-left: 51px; font-weight: normal;">Update Profile Details</h3>
+                <div id= "editform"; style="margin-top: 20px;">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Full Name*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Full Name*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Home Address*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Home Address*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Contact Number*</label>
+                    <input type="number" name="textinput-hide" id="textinput-hide" placeholder="Contact Number*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Email*</label>
+                    <input type="email" name="textinput-hide" id="textinput-hide" placeholder="Email*" value="">
+                </div>
+                <p>
+                    <a href="#" data-role="button" data-inline="true" style="font-size: 12px; float: right;  margin-top: -7px; height: 13px; background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; ">Update Data</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div id="footer"></div>
+
+</div>
+<script>
+    jQuery(document).ready(function(){
+        $(function () {
+            $("#editprofile").click(function () {
+                $('#updateprofile').popup('open');
+            });
+        });
+        $(function () {
+            $("#heart").click(function () {
+                $('#sucessfav').popup('open');
+            });
+        });
+
+    });
+
+</script>
+<script>
+    $(function () {
+        $('#Managewal').click(function () {
+            window.location.href = 'wallet.html';
+        });
+
+    });
+</script>
+<script>
+    $(function () {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+</body>
+</html>

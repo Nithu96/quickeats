@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wallet</title>
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="js/qrcode-reader.min.js?v=20190604"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div data-role="page" style="background-color: white">
+
+    <div id="header"></div>
+
+    <div data-role="content">
+        <p class="profile" style="font-size: 16px; font-family: Poppins; text-align: center; font-weight: bold;">My Wallet & Points</p>
+        <div class="ui-grid-solo" style="border: 1px solid; border-color: #000; margin-top: -5px; text-align: center; width: 260px;
+        margin-left: 40px;">
+                <div class="ui-block-a" >
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Wallet balance :</span>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">Rs 2000.00</span> <br>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Available Points :</span>
+                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">250</span><br><br>
+
+                </div>
+        </div>
+        <p>
+            <a href="#" id="addfuns" data-role="button" data-inline="true" style="font-size: 12px;  margin-left: 4%;  background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; display:inline" class="inline">Add Funds</a>
+            <a href="#" id="qr" data-role="button" data-inline="true" style="font-size: 12px;  margin-top: -34px; margin-left: 59%; background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; height: 17px; ">Redeem Coupon</a>
+        </p>
+        <hr>
+    </div>
+
+
+    <div id="footer"></div>
+
+</div>
+
+
+<script>
+    $(function () {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+</body>
+</html>

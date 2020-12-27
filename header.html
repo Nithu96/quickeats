@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+<!--    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>-->
+<!--    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>-->
+</head>
+<body>
+
+<div data-role="header" id="MainLogo" data-position="fixed" style="background-color: white; border-bottom-color: black">
+    <img id="logo" src="image/mainLogo.png" class="logo"  >
+    <img id="home"   type="button" src="image/home.png" class="ui-icon-home"  >
+    <img id="cart"   type="button" src="image/shopping-cart.png"  class="ui-icon-cart" >
+    <img id="search" type="button" src="image/search.png" class="ui-icon-search"  >
+    <img id="menu"   type="button" src="image/menu.png" class="ui-icon-menu"   >
+
+    <div id="myModal" class="modal">
+
+        <!--pop up search -->
+        <div class="modal-content">
+            <span class="close"></span>
+            <p>Search Dish / Restaurant</p>
+<!--            <label for="search-basic">Search Input:</label>-->
+            <input type="search" name="search" id="search-basic" class="searchbox" value="" />
+        </div>
+
+    </div>
+
+</div>
+
+<div data-role="panel" data-display="overlay" id="mypanel" style="width: 50%; background: #ececec; ">
+    <div class="panel-top-box" >
+        <br/>
+        <img id="img" src="image/Avater.png" style="cursor: pointer;" width="100"/>
+        <br/>
+<!--        <span class="text-normal text-panel-name">nithu</span><br/>-->
+<!--        <span class="text-normal text-email-panel-name">nithu@iit.ac.lk</span>-->
+        <span  id="signUp" type="button" class="text-normal2">logIn/SignUp</span><br/>
+    </div>
+    <ul data-role="listview" data-inset="false" data-shadow="false" style="cursor: pointer;">
+
+        <li id="menu-home" class="menu-item-2">
+            <img class="menu-icon" src="image/profile.svg" width="20"/>
+            <span class="menu-text">My Profile</span>
+        </li>
+        <li id="menu-about-us" class="menu-item-2">
+            <img class="menu-icon" src="image/aboutus.png" width="20"/>
+            <span class="menu-text">About Us</span>
+        </li>
+        <li id="menu-restaurant" class="menu-item-2">
+            <img class="menu-icon" src="image/shop.svg" width="20"/>
+            <span class="menu-text">Restaurants</span>
+        </li>
+        <li id="menu-contact-us" class="menu-item-2">
+            <img class="menu-icon" src="image/contactus.svg" width="20"/>
+            <span class="menu-text">Contact us</span>
+        </li>
+        <li id="menu-logout" class="menu-item-2">
+            <img class="menu-icon" src="image/logout.svg" width="20"/>
+            <span class="menu-text">log out</span>
+        </li>
+
+    </ul>
+
+<!--    <button id="logoutbtn" class="logoutbtn">Logout</button>-->
+</div>
+
+
+
+<script>
+    $( document ).ready(function() {
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("search");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    });
+</script>
+
+<script>
+    $(function () {
+        $('#home').click(function () {
+            window.location.href = 'index.html';
+        });
+        $('#cart').click(function () {
+            window.location.href = 'checkout.html';
+        });
+        $('#menu').click(function () {
+            $("#mypanel").panel("open", {});
+        });
+        $('#menu-contact-us').click(function () {
+            window.location.href = 'contactus.html';
+        });
+        $('#menu-about-us').click(function () {
+            window.location.href = 'aboutus.html';
+        });
+        $('#menu-restaurant').click(function () {
+            window.location.href = 'restaurant.html';
+        });
+        $('#menu-home').click(function () {
+            window.location.href = 'profile.html';
+        });
+        $('#signUp').click(function () {
+            window.location.href = 'registration.html';
+        });
+
+    });
+</script>
+
+</body>
+</html>
