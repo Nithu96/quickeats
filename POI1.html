@@ -190,20 +190,15 @@
 </div>
 
 <script>
-    jQuery(document).ready(function(){
-        $(function () {
-            $("#addcomment").click(function () {
-                $('#popupLogin1').popup('open');
-            });
+    $(function () {
+        $("#addcomment").click(function () {
+            reset();
+            $('#popupLogin1').popup('open');
         });
-        $(function () {
-            $("#heart").click(function () {
-                $('#sucessfav').popup('open');
-            });
+        $("#heart").click(function () {
+            $('#sucessfav').popup('open');
         });
-
     });
-
 </script>
 <script>
     
@@ -273,9 +268,9 @@
         });
     }
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
+    // span.onclick = function () {
+    //     modal.style.display = "none";
+    // };
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
@@ -418,42 +413,45 @@
     });
 </script>
 <script>
+reset();
+    function reset(){
 
-    $('.rate-one').on('click', function () {
-        $('.rate-one').toggleClass("rate-active-one");
-    });
-    $('.rate-two').on('click', function () {
-        $('.rate-one').not(this).removeClass("rate-active-one");
-        $('.rate-one').toggleClass("rate-active-one");
-        $('.rate-two').toggleClass("rate-active-two");
-    });
-    $('.rate-three').on('click', function () {
-        $('.rate-one').not(this).removeClass("rate-active-one");
-        $('.rate-two').not(this).removeClass("rate-active-two");
-        $('.rate-one').toggleClass("rate-active-one");
-        $('.rate-two').toggleClass("rate-active-two");
-        $('.rate-three').toggleClass("rate-active-three");
-    });
-    $('.rate-four').on('click', function () {
-        $('.rate-one').not(this).removeClass("rate-active-one");
-        $('.rate-two').not(this).removeClass("rate-active-two");
-        $('.rate-three').not(this).removeClass("rate-active-three");
-        $('.rate-one').toggleClass("rate-active-one");
-        $('.rate-two').toggleClass("rate-active-two");
-        $('.rate-three').toggleClass("rate-active-three");
-        $('.rate-four').toggleClass("rate-active-four");
-    });
-    $('.rate-five').on('click', function () {
-        $('.rate-one').not(this).removeClass("rate-active-one");
-        $('.rate-two').not(this).removeClass("rate-active-two");
-        $('.rate-three').not(this).removeClass("rate-active-three");
-        $('.rate-four').not(this).removeClass("rate-active-four");
-        $('.rate-one').toggleClass("rate-active-one");
-        $('.rate-two').toggleClass("rate-active-two");
-        $('.rate-three').toggleClass("rate-active-three");
-        $('.rate-four').toggleClass("rate-active-four");
-        $('.rate-five').toggleClass("rate-active-five");
-    });
+        $('.rate-one').on('click', function () {
+            $('.rate-one').toggleClass("rate-active-one");
+        });
+        $('.rate-two').on('click', function () {
+            $('.rate-one').not(this).removeClass("rate-active-one");
+            $('.rate-one').toggleClass("rate-active-one");
+            $('.rate-two').toggleClass("rate-active-two");
+        });
+        $('.rate-three').on('click', function () {
+            $('.rate-one').not(this).removeClass("rate-active-one");
+            $('.rate-two').not(this).removeClass("rate-active-two");
+            $('.rate-one').toggleClass("rate-active-one");
+            $('.rate-two').toggleClass("rate-active-two");
+            $('.rate-three').toggleClass("rate-active-three");
+        });
+        $('.rate-four').on('click', function () {
+            $('.rate-one').not(this).removeClass("rate-active-one");
+            $('.rate-two').not(this).removeClass("rate-active-two");
+            $('.rate-three').not(this).removeClass("rate-active-three");
+            $('.rate-one').toggleClass("rate-active-one");
+            $('.rate-two').toggleClass("rate-active-two");
+            $('.rate-three').toggleClass("rate-active-three");
+            $('.rate-four').toggleClass("rate-active-four");
+        });
+        $('.rate-five').on('click', function () {
+            $('.rate-one').not(this).removeClass("rate-active-one");
+            $('.rate-two').not(this).removeClass("rate-active-two");
+            $('.rate-three').not(this).removeClass("rate-active-three");
+            $('.rate-four').not(this).removeClass("rate-active-four");
+            $('.rate-one').toggleClass("rate-active-one");
+            $('.rate-two').toggleClass("rate-active-two");
+            $('.rate-three').toggleClass("rate-active-three");
+            $('.rate-four').toggleClass("rate-active-four");
+            $('.rate-five').toggleClass("rate-active-five");
+        });
+    }
 
 </script>
 
