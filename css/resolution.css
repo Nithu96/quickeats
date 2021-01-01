@@ -23,7 +23,52 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    .logo{
+        width: 10% !important;
+    }
+    .ui-icon-home{
+      width: 3% !important;
+      margin-left: 58% !important;
+    }
+    .ui-icon-cart {
+      width: 3% !important;
+    }
+    .ui-icon-search {
+      width: 3% !important;
+    }
+    .ui-icon-menu{
+      width: 3% !important;
+    }
+    .footerlogo{
+      width: 15% !important;
+    }
+    .twitter{
+      width: 3% !important;
+      margin-left: 59% !important;
+      margin-bottom: 3% !important;
+    }
+    .facebook{
+      width: 3% !important;
+      margin-bottom: 3% !important;
+    }
+    .text-normal{
+    margin-left: 37% !important;
+    }
+    .ui-grid-solo{
+      width: 321px !important;
+      margin-left: 26% !important;
+    }
+    .editprofilelink{
+      margin-left: 217px !important;
+    }
+    .regrest{
+      margin-left: 379px !important;
+      width: 25% !important;
+    }
+    .regsubmit{
+      margin-left: 66px !important;
+      width: 80% !important;
+    }
 }
 
 /*

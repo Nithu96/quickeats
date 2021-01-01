@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resolution.css">
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="js/qrcode-reader.min.js?v=20190604"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #qr-reader__dashboard_section_swaplink{
+            display: none !important;
+        }
+
+        #qr-reader__dashboard_section{
+            padding: 0px !important;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" style="background-color: white">
+    
+        <div data-role="content">
+        <span class="cqrname" style="font-size: 14px; font-family: Poppins; font-weight: bold;">Scan the QR Code to add funds to wallet</span>
+        <br><br><br>
+            <div id="qr-reader" style="width:100%"></div>
+        </div>
+    
+    </div>
+    <script src="js/htmlqrcode.js"></script> 
+    <script>
+
+        var lastResult, countResults = 0;
+    
+        function onScanSuccess(qrCodeMessage) {
+            if (qrCodeMessage !== lastResult) {
+                ++countResults;
+                lastResult = qrCodeMessage;
+    
+                alert('QR Scanned, ' + qrCodeMessage + ', Fund added !')
+            }
+        }
+    
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+    </script>
+</body>
+</html> -->

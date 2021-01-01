@@ -130,6 +130,7 @@
     font-size: 12px;
     font-family: "Poppins";
     margin-bottom: 50%;
+
 }
 
 /*footer icons */
@@ -306,3 +307,38 @@ input-field .rate-icons {
 .rating-stars ul > li.star.selected > i.fa {
     color: #FF912C;
 }
+
+.owl-prev,
+.owl-next {
+    width: 20px !important;
+    position: absolute;
+    top: -35px;
+    transform: translateY(-50%);
+    box-shadow: none!important;
+
+}
+
+.owl-prev {
+    right: 22px;
+}
+
+.owl-next {
+    right: 0rem;
+}
+
+/* walet  */
+.custom-table{
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins";
+    font-size: 12px;
+}
+
+.custom-table tr td ,
+.custom-table tr th{
+    border: 1px solid black;
+
+    padding: 5px;
+}
+

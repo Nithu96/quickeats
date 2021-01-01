@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resolution.css">
 
     <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,9 +19,109 @@
     <div id="header"></div>
 
     <div data-role="content">
-       registration
+        <span class="registration" style="font-size: 14px; font-family: Poppins; font-weight: bold;">User Registration</span>
+        <p class="regidiscription" style="font-size: 11px; font-family: Poppins; font-weight: normal; text-align: justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <div>
+            <img id="profile" src="image/Avater.png" type="button" style="  display: block; margin-top: -4px; margin-left: 38px;" width="100"/>
+            <p style="margin-top: -55px;">
+            <a href="#" id="editprofilelink" class="editprofilelink" style="font-size: 12px; height: 13px;  font-family: Poppins; font-weight: normal; color:black; margin-left: 139px;">Upload Profile picture</a>    
+            </p>
+        </div>
+        <div id= "registrationform"; style="margin-top: 41px; font-size: 12px;">
+            <label for="textinput-hide" class="ui-hidden-accessible" >Full Name*</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Full Name*" value="" >
+            <label for="textinput-hide" class="ui-hidden-accessible" >Home Address*</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Home Address*" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible" >Contact Number*</label>
+            <input type="number" name="textinput-hide" id="textinput-hide" placeholder="Contact Number*" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible" >Email*</label>
+            <input type="email" name="textinput-hide" id="textinput-hide" placeholder="Email*" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible" >Password*</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Password*" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible" >Confirm Password*</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Confirm Password*" value="">
+        </div>
+        <form>
+            <input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" style="background-color: white; border: none; margin-top: -1px;
+            width: 16px;">
+            <a href="#" for="checkbox-mini-0" id="editprofilelink" class="editprofilelink2" style="font-size: 12px; font-family: Poppins; font-weight: normal; color:black; margin-left: 31px;">Please tick the check box to accept terms and conditions</a>    
+        </form>
+       <p>
+        <table style="width:50%">
+        <tr>
+        <td style="width: 50%;">
+            <button id="Reset" class="regrest" data-role="button" data-inline="true"
+                    style="font-size: 12px; background-color:white; border-color: #D6A640; font-family: Poppins; font-weight: normal; width: 44%;
+                    margin-left: 140px; color: #D6A640; text-align: center; display:inline" class="inline">Reset</button>
+        </td>
+        <td>
+            <button id="regsubmit" class="regsubmit" data-role="button" data-inline="true" style="font-size: 12px;background-color: #D6A640;width: 80%;margin-left: 37px;
+            font-family: Poppins; font-weight: normal; color: white; text-align: center; ">Submit</button>
+        </td>
+        </tr>
+        </table>
+        </p>
     </div>
 
+    <div data-role="popup" id="userlogin" data-theme="a" class="ui-corner-all" >
+        <!-- <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right" >X</a> -->
+        <a href="#" data-rel="back" style="color: black; float: right; margin-top: 5px; margin-right: 15px; border: none; background-color: white;" class="ui-btn " > X</a>
+
+        <form>
+            <div  style="padding:33px 30px;">
+                <span class="registration" style="font-size: 16px; font-family: Poppins; font-weight: bold;">User Login</span>
+                <div id= "editform"; style="margin-top: 20px; font-size: 12px;">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Full Name*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Full Name*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Password*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Password*" value="">
+                   
+                </div>
+                <a href="#newpassword" for="checkbox-mini-0" id="forgotpw" class="forgotpw" style="font-size: 12px; font-family: Poppins; font-weight: normal; color:black;">forgot password?</a> <br>  
+                <a href="#" for="checkbox-mini-0" id="createacc" class="createacc" style="font-size: 12px; font-family: Poppins; font-weight: normal; color:black; ">Join us by creating an account</a>    
+                <p>
+                    <table style="width:100%">
+                    <tr>
+                    <td style="width: 75%;">
+                        <button id="sendlogin" class="regrest" data-role="button" data-inline="true"
+                        style="font-size: 12px;background-color: #D6A640;width: 60%;
+                        margin-left: 81px;font-family: Poppins; font-weight: normal; color: white; text-align: center; " class="inline">Send</button>
+                    </td>
+                    </tr>
+                    </table>
+                    </p>
+            </div>
+        </form>
+    </div>
+
+    <div data-role="popup" id="newpassword" data-theme="a" class="ui-corner-all" >
+        <!-- <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right" >X</a> -->
+        <a href="#" data-rel="back" style="color: black; float: right; margin-top: 5px; margin-right: 15px; border: none; background-color: white;" class="ui-btn " > X</a>
+
+        <form>
+            <div  style="padding:33px 30px;">
+                <span class="registration" style="font-size: 16px; font-family: Poppins; font-weight: bold;">Enter New Password</span>
+                <div id= "editform"; style="margin-top: 20px; font-size: 12px;">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >New Password*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="New Password*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible" >Confirm Password*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Confirm Password*" value="">
+                   
+                </div>
+                <p>
+                    <table style="width:100%">
+                    <tr>
+                    <td style="width: 75%;">
+                        <button id="confirm" class="confirm" data-role="button" data-inline="true"
+                        style="font-size: 12px;background-color: #D6A640;width: 60%;
+                        margin-left: 81px;font-family: Poppins; font-weight: normal; color: white; text-align: center; " class="inline">Confirm</button>
+                    </td>
+                    </tr>
+                    </table>
+                    </p>
+            </div>
+        </form>
+    </div>
 
     <div id="footer"></div>
 
@@ -31,8 +132,26 @@
     $(function () {
         $('#header').load('header.html');
         $('#footer').load('footer.html');
+        $('#sendlogin').click(function () {
+            window.location.href = 'profile.html';
+        });
     });
 </script>
+<script>
+    jQuery(document).ready(function(){
+        $(function () {
+            $("#regsubmit").click(function () {
+                $('#userlogin').popup('open');
+            });
+        });
+        $(function () {
+            $("#heart").click(function () {
+                $('#sucessfav').popup('open');
+            });
+        });
+       
+    });
 
+</script>
 </body>
 </html>
