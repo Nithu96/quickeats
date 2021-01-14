@@ -168,6 +168,28 @@
 
     </div>
 
+
+    <div data-role="popup" id="replyMsgBox" data-theme="a" class="ui-corner-all">
+        <a data-rel="back"
+           style="color: black; float: right; margin-top: 15px; margin-right: 15px; border: none; background-color: white;"
+           class="ui-btn "> X</a>
+        <!-- <img  type="button" src="image/close.png" data-rel="back" /> -->
+
+        <div style="padding:10px 20px;">
+            <h3>Add your reply.</h3>
+
+            <!-- <input type="text" name="user" id="un" value="" placeholder="add comment" data-theme="a"> -->
+
+            <textarea name="textarea" id="replyinputmsg" style="margin-top: -17px;"></textarea>
+
+            <p>
+                <a href="#" data-rel="back" id="saveMsg" data-role="button" data-inline="true"
+                   class="ys-button">Save</a>
+            </p>
+        </div>
+
+    </div>
+
     <div data-role="popup" id="sucessfav" data-theme="a" class="ui-corner-all">
         <a href="#" data-rel="back"
            class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
@@ -227,7 +249,7 @@
     $("#chat-box-items").empty();
 
     $("#chat-box-items").append('<div class="message-item">\n' +
-        '                <table>\n' +
+        '                <table style="width: 100%">\n' +
         '                    <tr>\n' +
         '                        <td>\n' +
         '                            <img src="image/Avater.png" class="message-item-pro-pic"/>\n' +
@@ -239,8 +261,13 @@
         '                            <br/><img src="image/star/1.png" width="80">' +
         '                            </div>\n' +
         '                        </td>\n' +
+        '<td style="text-align: right;">' +
+        '   <a id="reply-btn" style="font-weight: 100" href="#">Reply</a>' +
+        '</td>' +
         '                    </tr>\n' +
         '                </table>\n' +
+        '<div id="reply-messages">' +
+        '</div>' +
         '            </div>'
     );
 
@@ -279,6 +306,10 @@
 </script>
 <script>
     $(function () {
+
+        $('#reply-btn').click(function () {
+            $('#replyMsgBox').popup('open');
+        });
 
         $('#menu-messages').addClass('menu-selected');
 
@@ -383,6 +414,42 @@
             // JUST RESPONSE (Not needed)
             var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
             sessionStorage.setItem('rating', ratingValue);
+        });
+
+        $('#saveMsg').click(function () {
+
+            var message = $('#replyinputmsg').val();
+
+            let replyComments = sessionStorage.getItem('replyComments');
+
+            if (replyComments != null) {
+                var array = JSON.parse(replyComments);
+
+                array.replyItems.push(message);
+
+                let storeObj = JSON.stringify(array);
+
+                sessionStorage.setItem('replyComments', storeObj);
+            } else {
+                var messageList = {
+                    replyItems: []
+                };
+
+                messageList.replyItems.push(message);
+
+                let storeObj = JSON.stringify(messageList);
+
+                sessionStorage.setItem('replyComments', storeObj);
+            }
+
+            if (message.length > 0) {
+                $('#reply-messages').append('<div class="reply-msg-box">' + message + '</div>');
+
+                $('#replyinputmsg').val('');
+            } else {
+                $("#popupBasic").popup("open", {x: evt.pageX, y: evt.pageY});
+            }
+
         });
     });
 </script>
