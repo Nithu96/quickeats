@@ -45,7 +45,7 @@
                         2000.00</span> <br>
                     <span class="food-attribute">Available
                         Points :</span>
-                    <span class="food-des">250</span><br><br>
+                    <span id="available-point" class="food-des">250</span><br><br>
 
                 </div>
             </div>
@@ -238,7 +238,10 @@
                 ++countResults;
                 lastResult = qrCodeMessage;
 
-                alert('QR Scanned, ' + qrCodeMessage + ', Fund added !')
+                let availablePoints = sessionStorage.getItem('available-points');
+
+                $('#available-point').text(availablePoints + 5);
+                sessionStorage.setItem('available-points', availablePoints + 5);
             }
         }
 
@@ -248,6 +251,13 @@
     </script>
     <script>
         $(function () {
+            let availablePoints = sessionStorage.getItem('available-points');
+            if(availablePoints != null){
+                $('#available-point').text(availablePoints);
+            }else{
+                $('#available-point').text('0');
+            }
+
             $("#addfuns").click(function () {
                 // reset();
                 $('#addfunspopup').popup('open');

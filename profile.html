@@ -43,7 +43,7 @@
                         2000.00</span> <br>
                 <span class="food-attribute">Available
                         Points :</span>
-                <span class="food-des">250</span><br><br>
+                <span id="available-point" class="food-des">250</span><br><br>
 
             </div>
         </div>
@@ -136,6 +136,13 @@
 </script>
 <script>
     $(function () {
+        let availablePoints = sessionStorage.getItem('available-points');
+        if(availablePoints != null){
+            $('#available-point').text(availablePoints);
+        }else{
+            $('#available-point').text('0');
+        }
+
         $('#Managewal').click(function () {
             window.location.href = 'wallet.html';
         });
