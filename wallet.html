@@ -238,10 +238,12 @@
                 ++countResults;
                 lastResult = qrCodeMessage;
 
+                alert('QR Scanned, ' + qrCodeMessage + ', Fund added !');
+
                 let availablePoints = sessionStorage.getItem('available-points');
 
-                $('#available-point').text(availablePoints + 5);
-                sessionStorage.setItem('available-points', availablePoints + 5);
+                $('#available-point').text(parseInt(availablePoints) + 5);
+                sessionStorage.setItem('available-points', parseInt(availablePoints) + 5);
             }
         }
 
