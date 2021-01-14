@@ -1,119 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wallet</title>
 
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
     <script src="js/qrcode-reader.min.js?v=20190604"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/resolution.css">
+
     <style>
-        #qr-reader__dashboard_section_swaplink{
+        #qr-reader__dashboard_section_swaplink {
             display: none !important;
         }
 
-        #qr-reader__dashboard_section{
+        #qr-reader__dashboard_section {
             padding: 0px !important;
         }
     </style>
 </head>
+
 <body>
 
-<div data-role="page" style="background-color: white">
+    <div data-role="page" style="background-color: white">
 
-    <div id="header"></div>
+        <div id="header"></div>
 
-    <div data-role="content">
-        <p class="profile" style="font-size: 16px; font-family: Poppins; text-align: center; font-weight: bold;">My Wallet & Points</p>
-        <div class="ui-grid-solo" style="border: 1px solid; border-color: #000; margin-top: -5px; text-align: center; width: 260px;
-        margin-left: 40px;">
-                <div class="ui-block-a" >
-                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Wallet balance :</span>
-                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">Rs 2000.00</span> <br>
-                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: bold;">Available Points :</span>
-                    <span class="text" style="font-size: 12px; font-family: Poppins; font-weight: normal;">250</span><br><br>
+        <div data-role="content " class="wallet-page">
+            <div class="profile head-attribute">My Wallet & Points</div>
+
+            <div class="ui-grid-solo value_block">
+                    <div class="ui-block-a">
+                    <span class="food-attribute">Wallet balance
+                        :</span>
+                    <span class="food-des">Rs
+                        2000.00</span> <br>
+                    <span class="food-attribute">Available
+                        Points :</span>
+                    <span class="food-des">250</span><br><br>
 
                 </div>
+            </div>
+            <div class="ui-grid-a land-break">
+                <a href="#" id="qr" data-role="button" data-inline="true" class="y-button tab-reed">Redeem Coupon</a>
+                <a href="#" id="addfuns" data-role="button" data-inline="true" class="y-button spes_y"> Add Funds</a>
+            </div>
+
+            <hr class="wallet-hr">
+
+            <div class="ui-grid-a box-of-deat mr-b">
+                <div class="ui-block-a food-attribute">
+                    Past Transactions
+                </div>
+                <div class="ui-block-b">
+                </div>
+            </div>
+            <div class="ui-grid-a box-of-deat mr-b">
+                <table class="tran_table">
+                    <thead>
+                        <tr>
+                            <th >Order Number</th>
+                            <th>Status</th>
+                            <th>total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Order 001</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            <tr>
+                                <td>Order 002</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            <tr>
+                                <td>Order 003</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            <tr>
+                                <td>Order 004</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr><tr>
+                                <td>Order 005</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            <tr>
+                                <td>Order 006</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            <tr>
+                                <td>Order 006</td>
+                                <td>Delivered</td>
+                                <td>Rs: 1750.00</td>
+                            </tr>
+                            </tbody>
+
+                </table>
+            </div>
+
         </div>
-        <p>
-            <a href="#" id="addfuns" data-role="button" data-inline="true" style="font-size: 12px;  margin-left: 4%;  background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; display:inline" class="inline">Add Funds</a>
-            <a href="#" id="qr" data-role="button" data-inline="true" style="font-size: 12px;  margin-top: -34px; margin-left: 59%; background-color: #D6A640; font-family: Poppins; font-weight: normal; color: white; text-align: center; height: 17px; ">Redeem Coupon</a>
-        </p>
-        <hr>
+
+        <div id="myModal" class="modal">
+
+            <!--pop up search -->
+            <div class="modal-content">
+                <span class="close"></span>
+
+
+                <div id="qr-reader" style="width:100%"></div>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+
+        <div data-role="popup" id="addfunspopup" data-theme="a" class="ui-corner-all">
+            <a href="#" data-rel="back"
+                class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
+            <form>
+                <div style="padding:33px 30px;">
+                    <div class="head-attribute-pop">Add Funds to wallet</div>
+
+                    <div class="ui-grid-a" style="width: 265px;">
+                        <div class="ui-block-a">
+                            <span class="text" class="ui-hidden-accessible food-des">Choose Option</span>
+                        </div>
+                        <div class="ui-block-b">
+                            <img type="Button" id="papal" src="image/paypal.png" alt="" style="width: 35px;">
+                            <img id="visa" src="image/visa.png" alt="" style="width: 35px; margin-left: 10px;">
+                            <img id="master" src="image/master.png" alt="" style="width: 35px; margin-left: 7px;">
+                        </div>
+                        <div style="height: 32px; margin-top: 49px;">
+                            <label for="textinput-hide" class="ui-hidden-accessible">Amount to add*</label>
+                            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Amount to add*"
+                                value="">
+                        </div>
+                        <p>
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width: 50%;">
+                                    <button id="return" data-role="button" data-inline="true"
+                                        class="ys-button ">Return</button>
+                                </td>
+                                <td style="width: 50%;">
+                                    <button id="add" data-role="button" data-inline="true"
+                                        class="ys-button ">Add</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </p>
+                    </div>
+            </form>
+        </div>
+
+        <div data-role="popup" id="funadded" data-theme="a" class="ui-corner-all">
+            <a href="#" data-rel="back"
+                style="color: black; float: right; margin-top: 5px; margin-right: 15px; border: none; background-color: white;"
+                class="ui-btn "> X</a>
+            <form>
+                <div style="padding:33px 30px;">
+                    <span class="text"
+                        style="font-size: 16px; font-family: Poppins; font-weight: bold; color:#2B9F3E;">Fund addition
+                        was Successful.</span><br>
+                    <p>
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 50%;">
+                                <button id="return" data-role="button" data-inline="true"
+                                    class="ys-button ">Return</button>
+                            </td>
+                        </tr>
+                    </table>
+                    </p>
+                </div>
+            </form>
+        </div>
 
     </div>
+    <script>
+        $(document).ready(function () {
+            var modal = document.getElementById("myModal");
 
-    <div id="myModal" class="modal">
+            // Get the button that opens the modal
+            var btn = document.getElementById("qr");
 
-        <!--pop up search -->
-        <div class="modal-content">
-            <span class="close"></span>
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
 
-            <div id="qr-reader" style="width:100%"></div>
-
-        </div>
-
-    </div>
-    <div id="footer"></div>
-
-</div>
-<script>
-    $( document ).ready(function() {
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("qr");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
                 modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <script src="js/htmlqrcode.js"></script>
+
+    <script>
+
+        var lastResult, countResults = 0;
+
+        function onScanSuccess(qrCodeMessage) {
+            if (qrCodeMessage !== lastResult) {
+                ++countResults;
+                lastResult = qrCodeMessage;
+
+                alert('QR Scanned, ' + qrCodeMessage + ', Fund added !')
             }
         }
 
-    });
-</script>
-<script src="js/htmlqrcode.js"></script>
-
-<script>
-    $(function () {
-        $('#header').load('header.html');
-        $('#footer').load('footer.html');
-    });
-
-    var lastResult, countResults = 0;
-
-    function onScanSuccess(qrCodeMessage) {
-        if (qrCodeMessage !== lastResult) {
-            ++countResults;
-            lastResult = qrCodeMessage;
-
-            alert('QR Scanned, ' + qrCodeMessage + ', Fund added !')
-        }
-    }
-
-    var html5QrcodeScanner = new Html5QrcodeScanner(
-        "qr-reader", { fps: 10, qrbox: 250 });
-    html5QrcodeScanner.render(onScanSuccess);
-</script>
-
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+    </script>
+    <script>
+        $(function () {
+            $("#addfuns").click(function () {
+                // reset();
+                $('#addfunspopup').popup('open');
+            });
+            $("#return").click(function () {
+                // reset();
+                $('#addfunspopup').popup('close');
+            });
+            $("#add").click(function () {
+                // reset();
+                $('#funadded').popup('open');
+            });
+        });
+    </script>
 </body>
+
 </html>
