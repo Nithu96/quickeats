@@ -244,6 +244,8 @@
 
                 $('#available-point').text(parseInt(availablePoints) + 5);
                 sessionStorage.setItem('available-points', parseInt(availablePoints) + 5);
+
+                modal.style.display = "none";
             }
         }
 
@@ -257,6 +259,7 @@
             if(availablePoints != null){
                 $('#available-point').text(availablePoints);
             }else{
+                $('#available-point').text(0);
                 $('#available-point').text('0');
             }
 
