@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Profile</title>
 
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
     <script src="js/qrcode-reader.min.js?v=20190604"></script>
@@ -22,129 +22,132 @@
 
 <body>
 
-    <div data-role="page" style="background-color: white">
+<div data-role="page" style="background-color: white">
 
-        <div id="header"></div>
+    <div id="header"></div>
 
-        <div data-role="content ">
-            <div class="profile head-attribute">
-                My Profile</div>
-            <img id="img" src="image/Avater.png" class="profile_pic_page" />
+    <div data-role="content">
+        <div class="profile head-attribute">
+            My Profile
+        </div>
+        <img id="img" src="image/Avater.png" class="profile_pic_page"/>
 
-            <a href="#" id="editprofile" data-role="button" data-inline="true" class="y-button spes_b">Edit Profile</a>
+        <a href="#" id="editprofile" data-role="button" data-inline="true" class="y-button spes_b">Edit Profile</a>
 
-            <div class="ui-grid-solo value_block">
-                    <div class="ui-block-a">
+        <div class="ui-grid-solo value_block">
+                
+            <div class="ui-block-a">
                     <span class="food-attribute">Wallet balance
                         :</span>
-                    <span class="food-des">Rs
+                <span class="food-des">Rs
                         2000.00</span> <br>
-                    <span class="food-attribute">Available
+                <span class="food-attribute">Available
                         Points :</span>
-                    <span class="food-des">250</span><br><br>
+                <span class="food-des">250</span><br><br>
 
+            </div>
+        </div>
+        <div class="ui-grid-a box-of-deat">
+            <div class="ui-block-a food-attribute">
+                Name
+            </div>
+            <div class="ui-block-b">
+                <div class="food-des">
+                    - Mr. John Doe
                 </div>
             </div>
-            <div class="ui-grid-a box-of-deat">
-                <div class="ui-block-a food-attribute">
-                    Name
-                </div>
-                <div class="ui-block-b">
-                    <div class="food-des">
-                        - Mr. John Doe
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui-grid-a box-of-deat">
-                <div class="ui-block-a food-attribute">
-                    Home Address
-                </div>
-                <div class="ui-block-b">
-                    <div class="food-des">
-                        - No: 23, Melbourne Ave, Wellawatte.
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui-grid-a box-of-deat mr-b">
-                <div class="ui-block-a food-attribute">
-                    Contact
-                </div>
-                <div class="ui-block-b">
-                    <div class="food-des">
-                        - +94 768866669
-                    </div>
-                </div>
-            </div>
-
-
-            <a href="#" data-role="button" data-inline="true" class="y-button fav">View Favorites</a>
-            <a href="#" id="Managewal" data-role="button" data-inline="true" class="y-button">Manage Wallet</a>
-
         </div>
 
-        <div data-role="popup" id="updateprofile" data-theme="a" class="ui-corner-all">
-            <a href="#" data-rel="back"
-                class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
-            <form>
-                <div style="padding:33px 30px;">
-                    <img id="img" src="image/Avater.png" style="  display: block; ; width: 25%;" />
-                    <div class="text-norm">
-                        Update Profile Details</div>
-                    <div id="editform" style="margin-top: 10px;">
-                        <label for="textinput-hide" class="ui-hidden-accessible">Full Name*</label> 
-                        <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Full Name*" value=""> 
-                        <label for="textinput-hide" class="ui-hidden-accessible">Home Address*</label>
-                        <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Home Address*"
-                            value="">
-                        <label for="textinput-hide" class="ui-hidden-accessible">Contact Number*</label>
-                        <input type="number" name="textinput-hide" id="textinput-hide" placeholder="Contact Number*"
-                            value="">
-                        <label for="textinput-hide" class="ui-hidden-accessible">Email*</label>
-                        <input type="email" name="textinput-hide" id="textinput-hide" placeholder="Email*" value="">
-                    </div>
-                    <div>
-                        <a href="#" data-role="button" data-inline="true" class="ys-button">Update
-                            Data</a>
-                    </div>
+        <div class="ui-grid-a box-of-deat">
+            <div class="ui-block-a food-attribute">
+                Home Address
+            </div>
+            <div class="ui-block-b">
+                <div class="food-des">
+                    - No: 23, Melbourne Ave, Wellawatte.
                 </div>
-            </form>
+            </div>
         </div>
 
-        <div id="footer"></div>
+        <div class="ui-grid-a box-of-deat mr-b">
+            <div class="ui-block-a food-attribute">
+                Contact
+            </div>
+            <div class="ui-block-b">
+                <div class="food-des">
+                    - +94 768866669
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#" data-role="button" data-inline="true" class="y-button fav">View Favorites</a>
+        <a href="#" id="Managewal" data-role="button" data-inline="true" class="y-button">Manage Wallet</a>
 
     </div>
-    <script>
-        jQuery(document).ready(function () {
-            $(function () {
-                $("#editprofile").click(function () {
-                    $('#updateprofile').popup('open');
-                });
-            });
-            $(function () {
-                $("#heart").click(function () {
-                    $('#sucessfav').popup('open');
-                });
-            });
 
-        });
+    <div data-role="popup" id="updateprofile" data-theme="a" class="ui-corner-all">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
+        <form>
+            <div style="padding:33px 30px;">
+                <img id="img" src="image/Avater.png" style="  display: block; ; width: 25%;"/>
+                <div class="text-norm">
+                    Update Profile Details
+                </div>
+                <div id="editform" style="margin-top: 10px;">
+                    <label for="textinput-hide" class="ui-hidden-accessible">Full Name*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Full Name*" value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible">Home Address*</label>
+                    <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Home Address*"
+                           value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible">Contact Number*</label>
+                    <input type="number" name="textinput-hide" id="textinput-hide" placeholder="Contact Number*"
+                           value="">
+                    <label for="textinput-hide" class="ui-hidden-accessible">Email*</label>
+                    <input type="email" name="textinput-hide" id="textinput-hide" placeholder="Email*" value="">
+                </div>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="ys-button">Update
+                        Data</a>
+                </div>
+            </div>
+        </form>
+    </div>
 
-    </script>
-    <script>
+    <div id="footer"></div>
+
+</div>
+<script>
+    jQuery(document).ready(function () {
         $(function () {
-            $('#Managewal').click(function () {
-                window.location.href = 'wallet.html';
+            $("#editprofile").click(function () {
+                $('#updateprofile').popup('open');
             });
-
         });
-    </script>
-    <script>
         $(function () {
-            $('#header').load('header.html');
-            $('#footer').load('footer.html');
+            $("#heart").click(function () {
+                $('#sucessfav').popup('open');
+            });
         });
-    </script>
+
+    });
+
+</script>
+<script>
+    $(function () {
+        $('#Managewal').click(function () {
+            window.location.href = 'wallet.html';
+        });
+
+    });
+</script>
+<script>
+    $(function () {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
 
 </body>
 
