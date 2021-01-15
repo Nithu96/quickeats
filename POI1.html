@@ -38,9 +38,15 @@
                 </div>
             </div>
         </div>
-        <div class="addfavourite food-des">Add to favourite <img id="heart" type="button" src="image/heart.png"
-                                                                 width="16"/></div>
-
+        <div class="addfavourite food-des">Add to favourite 
+            <!-- <button id="heart"  class="heart" type="button" width="16"><span>♥</span></button> -->
+            <img id="heart" type="button" src="image/heart.png"width="16"/>
+        </div>
+        <td style="width: 40%">
+            <div class="favourites">
+                <button style="width: 100% !important;" class="favourite-rate"><span>♥</span></button>
+            </div>
+        </td>
         <hr>
         <div class="ui-grid-a">
             <div class="ui-block-a food-attribute">
@@ -103,7 +109,7 @@
                             <img src="image/Avater.png" class="message-item-pro-pic"/>
                         </td>
                         <td>
-                            <b>niwarthana</b><br/>
+                            <b>niwarthana De Alwis</b><br/>
                             <span class="feedback-text">Great Products.</span><br/>
                             <span class="time-ago">3 hour ago.</span>
                         </td>
@@ -252,17 +258,17 @@
         '                <table style="width: 100%">\n' +
         '                    <tr>\n' +
         '                        <td>\n' +
-        '                            <img src="image/Avater.png" class="message-item-pro-pic"/>\n' +
+        '                            <img src="image/myimage.jpg" class="message-item-pro-pic"/>\n' +
         '                        </td>\n' +
         '                        <td style="padding-left: 10px">\n' +
         '                            <div>\n' +
-        '                                <b>niwarthana</b>\n' +
+        '                                <b>Niwarthana De Alwis</b>\n' +
         '                                <br/>\n' + "Great Products." + '\n' +
-        '                            <br/><img src="image/star/1.png" width="80">' +
+        '                            <br/><img src="image/star/4.png" width="80">' +
         '                            </div>\n' +
         '                        </td>\n' +
         '<td style="text-align: right;">' +
-        '   <a id="reply-btn" style="font-weight: 100" href="#">Reply</a>' +
+        '   <a id="reply-btn" style="font-weight: 100" href="#"> Reply</a>' +
         '</td>' +
         '                    </tr>\n' +
         '                </table>\n' +
@@ -282,7 +288,7 @@
                 '                        </td>\n' +
                 '                        <td style="padding-left: 10px">\n' +
                 '                            <div>\n' +
-                '                                <b>pavan</b>\n' +
+                '                                <b>pavan perera</b>\n' +
                 '                                <br/>\n' + value +
                 '                            </div>\n' +
                 '                        </td>\n' +
@@ -368,7 +374,7 @@
                     '                        </td>\n' +
                     '                        <td style="padding-left: 10px">\n' +
                     '                            <div>\n' +
-                    '                                <b>pavan</b>\n' +
+                    '                                <b>pavan perera</b>\n' +
                     '                                <br/>\n' + message + ' ' +
                     '                            <br/><img src="image/star/' + ratingValue + '.png" width="80">' +
                     '                            </div>\n' +
@@ -447,7 +453,7 @@
             }
 
             if (message.length > 0) {
-                $('#reply-messages').append('<div class="reply-msg-box">' + message + '</div>');
+                $('#reply-messages').append('<div class="reply-msg-box">'+ "pavan perera :  " + message + '</div>');
 
                 $('#replyinputmsg').val('');
             } else {

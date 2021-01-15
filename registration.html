@@ -69,6 +69,7 @@
                             class="y-button regsubmit">Submit</button>
                         <button id="Reset" class="regrest y-sec-button " data-role="button" data-inline="true"
                             class="inline">Reset</button>
+                            
                     </td>
                 </tr>
             </table>
@@ -90,7 +91,8 @@
                         <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Password*" value="">
 
                     </div>
-                    <a href="#newpassword" for="checkbox-mini-0" id="forgotpw" class="text-norm">forgot
+                    
+                    <a href="#" for="checkbox-mini-0" id="forgotpw" class="text-norm">forgot
                         password?</a> <br>
                     <a href="#" for="checkbox-mini-0" id="createacc" class="text-norm">Join us by
                         creating an account</a>
@@ -101,6 +103,7 @@
                                 <button id="sendlogin" class="y-button" data-role="button"
                                     data-inline="true">Send</button>
                             </td>
+                            
                         </tr>
                     </table>
                     </p>
@@ -142,7 +145,6 @@
         </div>
 
         <div id="footer"></div>
-
     </div>
 
 
@@ -167,7 +169,12 @@
                     $('#sucessfav').popup('open');
                 });
             });
-
+            $(function () {
+                $("#forgotpw").click(function () {
+                    $('#newpassword').popup('open');
+                });
+            });
+            
         });
 
     </script>

@@ -81,7 +81,7 @@
         </div>
 
 
-        <a href="#" data-role="button" data-inline="true" class="y-button fav">View Favorites</a>
+        <a href="#" id="viewFav" data-role="button" data-inline="true" class="y-button fav">View Favorites</a>
         <a href="#" id="Managewal" data-role="button" data-inline="true" class="y-button">Manage Wallet</a>
 
     </div>
@@ -114,6 +114,54 @@
             </div>
         </form>
     </div>
+    <div data-role="popup" id="fav" data-theme="a" class="ui-corner-all">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
+        <form>
+            <div style="padding:33px 30px;">
+                <div class="text-norm">
+                    Your Favorites List
+                </div>
+                
+                <p>
+                    <a href="#" data-rel="back" data-role="button" data-inline="true" class="ys-button">Return</a>
+                    <a href="#" data-rel="back" id="share" data-role="button" data-inline="true"
+                       class="ys-button">share</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div data-role="popup" id="fav" data-theme="a" class="ui-corner-all">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
+        <form>
+            <div style="padding:33px 30px;">
+                <div class="text-norm">
+                    Your Favorites List
+                </div>
+                <p>
+                    <a href="#" data-rel="back" data-role="button" data-inline="true" class="ys-button">Return</a>
+                    <a href="#"  id="share" data-role="button" data-inline="true"
+                       class="ys-button">share</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div data-role="popup" id="shareUi" data-theme="a" class="ui-corner-all">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a>
+        <form>
+            <div style="padding:33px 30px;">
+                <div class="text-norm">
+                    Your Favorites List
+                </div>
+                <p>
+                    <a href="#" data-rel="back" data-role="button" data-inline="true" class="ys-button">Return</a>
+                    
+                </p>
+            </div>
+        </form>
+    </div>
 
     <div id="footer"></div>
 
@@ -126,8 +174,18 @@
             });
         });
         $(function () {
+            $("#viewFav").click(function () {
+                $('#fav').popup('open');
+            });
+        });
+        $(function () {
             $("#heart").click(function () {
                 $('#sucessfav').popup('open');
+            });
+        });
+        $(function () {
+            $("#share").click(function () {
+                $('#shareUi').popup('open');
             });
         });
 
